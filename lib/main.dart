@@ -8,24 +8,18 @@ import 'package:movie/src/core/utils/app_util.dart';
 import 'package:movie/src/core/utils/global_utils.dart';
 import 'package:movie/src/injector.dart';
 
-import 'package:movie/src/presentation/screen/splash_screen/view/splash_screen.dart' as splash_screen;
-
+import 'package:movie/src/presentation/screen/splash_screen/view/splash_screen.dart'
+    as splash_screen;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // IsolateNameServer.registerPortWithName(
-  //   port.sendPort,
-  //   isolateName,
-  // );
   await AppUtil().initializePreStartupDependencies();
   runApp(const MyApp());
 }
 
-
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -33,19 +27,17 @@ class MyApp extends StatelessWidget {
         child: ScreenUtilInit(
             designSize: injector<AppConstants>().appDesignSize,
             builder: (context, _) => MaterialApp(
-              builder: (BuildContext context, Widget? widget) =>
-                  MediaQuery(
-                      data: MediaQuery.of(context)
-                          .copyWith(textScaleFactor: 1),
+                  builder: (BuildContext context, Widget? widget) => MediaQuery(
+                      data: MediaQuery.of(context).copyWith(textScaleFactor: 1),
                       child: widget!),
-              debugShowCheckedModeBanner: false,
-              title: 'The Movie App',
-              navigatorKey: navigatorKey,
-              onGenerateRoute: injector<AppRoutes>().onGenerateRoute,
-              initialRoute: splash_screen.SplashScreen.id,
-              theme: ThemeData(
-                colorSchemeSeed: Colors.blue,
-              ),
-            )));
+                  debugShowCheckedModeBanner: false,
+                  title: 'The Movie App',
+                  navigatorKey: navigatorKey,
+                  onGenerateRoute: injector<AppRoutes>().onGenerateRoute,
+                  initialRoute: splash_screen.SplashScreen.id,
+                  theme: ThemeData(
+                    colorSchemeSeed: Colors.blue,
+                  ),
+                )));
   }
 }

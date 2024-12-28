@@ -16,9 +16,7 @@ import 'core/utils/app_custom_color.dart';
 import 'core/utils/app_util.dart';
 import 'core/utils/font_constants.dart';
 
-
 final injector = GetIt.I;
-
 
 Future<void> initializeDependencies() async {
   injector.allowReassignment = true;
@@ -43,27 +41,17 @@ Future<void> initializeDependencies() async {
   injector.registerSingleton<AppImages>(AppImages());
   // ============ REGISTRATION OF API CONSTANTS ===============
 
-
-
   // ============ REGISTRATION SEMANTICS===============
-
-
-
 
   // ============ REGISTRATION CRYPTOGRAPHIC MANAGER===============
 
-
   // ============ REGISTRATION SHARED PREF MANAGER===============
-
 
   // ============ REGISTRATION CACHE CONSTANTS ===============
 
-
   // ============ REGISTRATION CACHE MANAGER ===============
 
-
   // ============ REGISTRATION OF LOCALIZATION ============
-
 
   // ============ REGISTRATION OF AppUtil ==============
   injector.registerSingleton<AppUtil>(AppUtil());
@@ -73,52 +61,32 @@ Future<void> initializeDependencies() async {
   injector.registerFactory<AppTextStyles>(() => AppTextStyles());
   // ============ REGISTRATION OF TEXT FIELD VALIDATOR ===============
 
-
   // ============ REGISTRATION OF INPUT FORMATTERS ===============
-
 
   // ============ REGISTRATION CRYPTOGRAPHIC CONSTANTS===============
 
-
   // ============ REGISTRATION CRYPTOGRAPHIC MANAGER===============
-
 
   // =========== REGISTRATION OF THEME ENGINE =============
 
   // =========== REGISTRATION OF TAB BAR MANAGER ==============
-
 
   // ============ REGISTRATION FIREBASE REMOTE CONFIG SERVICE ===============
 
   // ============ REGISTRATION OF APP UI PARAMS ===============
 
   injector.registerSingleton<AppUIParams>(
-      AppUIParams(injector(),injector(),injector()));
+      AppUIParams(injector(), injector(), injector()));
   // ============ REGISTRATION APP POPUPS ===============
 
   // ============ REGISTRATION PERMISSION MANAGER ===============
 
-
-
-
   // ============ REGISTRATION OF DIO ==============
   injector.registerSingleton<Dio>(Dio());
 
-
   // ============ REGISTRATION OF API CLIENT ==============
-
-
 
   // ============ REGISTRATION OF REPOSITORIES ============
 
-
-
-
-
   // ============ REGISTRATION OF USE CASES ===============
-
-
-
-
-
 }
