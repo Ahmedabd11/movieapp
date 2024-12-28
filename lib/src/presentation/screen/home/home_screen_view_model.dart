@@ -10,7 +10,7 @@ class HomeScreenViewModel extends UseLifeCycle with ChangeNotifier {
   TextEditingController title = TextEditingController();
 
   HomeScreenViewModel() {
-    Future.delayed(const Duration(seconds: 1), () async {
+    Future.delayed(const Duration(microseconds: 100), () async {
       fetchMovies();
       // Do something
     });
