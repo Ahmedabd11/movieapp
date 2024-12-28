@@ -5,6 +5,7 @@ import 'package:movie/src/injector.dart';
 import 'package:movie/src/presentation/widgets/generics/generic_text/generic_text.dart';
 
 import '../../../api_client/urls.dart';
+import '../../../core/utils/app_custom_color.dart';
 import '../../../data/repository/home_page_repo.dart';
 import '../../../model/movie.dart';
 import 'full_screen_video.dart';
@@ -19,7 +20,7 @@ class HomeDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title:  GenericText(movie.title, style: injector<AppTextStyles>().medium18),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon:  Icon(Icons.arrow_back, color: injector<AppCustomColor>().buttonTextColor),
           onPressed: () {
             Navigator.of(context).pop(); // Close the player when "Done" is pressed
           },

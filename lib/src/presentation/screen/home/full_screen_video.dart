@@ -50,7 +50,7 @@ class _FullScreenVideoPlayerState extends State<FullScreenVideoPlayer> {
         backgroundColor: Colors.black,
         title:  GenericText("Trailer", style: injector<AppTextStyles>().medium18),
         leading: IconButton(
-          icon: const Icon(Icons.close, color: Colors.white),
+          icon:  Icon(Icons.close, color:  injector<AppCustomColor>().buttonTextColor),
           onPressed: () {
             Navigator.of(context).pop(); // Close the player when "Done" is pressed
           },
