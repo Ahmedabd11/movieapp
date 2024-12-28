@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32" viewBox="0 0 32 32" id="grid">
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M12 14H6c-1.105 0-2-.895-2-2V6c0-1.105.895-2 2-2h6c1.105 0 2 .895 2 2v6C14 13.105 13.105 14 12 14zM26 14h-6c-1.105 0-2-.895-2-2V6c0-1.105.895-2 2-2h6c1.105 0 2 .895 2 2v6C28 13.105 27.105 14 26 14zM12 28H6c-1.105 0-2-.895-2-2v-6c0-1.105.895-2 2-2h6c1.105 0 2 .895 2 2v6C14 27.105 13.105 28 12 28zM26 28h-6c-1.105 0-2-.895-2-2v-6c0-1.105.895-2 2-2h6c1.105 0 2 .895 2 2v6C28 27.105 27.105 28 26 28z"></path>
+</svg>
